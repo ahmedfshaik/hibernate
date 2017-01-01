@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="edu.home.hibernate.app5.EmployeePan" table="EMPLOYEE_PAN">
+		<id name="eno" column="ENO">
+			<generator class="foreign">
+				<param name="property">employee</param>
+			</generator>
+		</id>
+		<property name="panno" column="PAN_NO" not-null="true"
+			unique="true" />
+		<!-- <many-to-one name="employee" class="Empl" insert="false" update="false" 
+			cascade="none"> <column name="ENO" unique="true" not-null="true"/> </many-to-one> -->
+		<one-to-one name="employee" class="edu.home.hibernate.app5.Employee" constrained="true" />
+	</class>
+</hibernate-mapping>

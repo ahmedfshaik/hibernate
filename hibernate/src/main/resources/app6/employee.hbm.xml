@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="edu.home.hibernate.app6.Employee" table="EMP">
+		<id name="eno" column="eno" type="int" unsaved-value="0">
+			<generator class="sequence">
+				<param name="sequence">EMP_SEQ</param>
+			</generator>
+		</id>
+		<property name="ename" column="ename" type="string" />
+		<property name="age" />
+		<property name="sal" />
+	</class>
+</hibernate-mapping>

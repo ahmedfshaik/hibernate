@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="edu.home.hibernate.app6.Customer" table="CUST">
+		<id name="customerPk" type="java.lang.Long" unsaved-value="null">
+			<column name="CUSTOMER_PK" precision="15" scale="0" />
+			<generator class="sequence">
+				<param name="sequence">CUSTOMER_SEQ</param>
+			</generator>
+		</id>
+		<property name="customerId" type="string">
+			<column name="CUSTOMER_ID" length="60" not-null="true" unique="true" />
+		</property>
+		<property name="customerName" type="string">
+			<column name="CUSTOMER_NAME" length="70" />
+		</property>
+		<property name="businessType" type="string">
+			<column name="BUSINESS_TYPE" length="25" />
+		</property>
+		<property name="customerAddress" type="string">
+			<column name="CUSTOMER_ADDRESS" length="200" />
+		</property>
+		<property name="customerPhone" type="string">
+			<column name="CUSTOMER_PHONE" length="25" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="edu.home.hibernate.app1.Student" table="STUDENT">
+		<!-- id property -->
+		<id name="sno" column="SNO" type="integer">
+			<!-- Primary key generator class -->
+			<generator class="assigned" />
+		</id>
+		<!-- common properties -->
+		<property name="sname" column="SNAME" type="string" length="100" />
+		<property name="email" column="EMAIL" type="string" length="100" />
+		<property name="mobile" column="MOBILE" type="long" not-null="true" />
+	</class>
+</hibernate-mapping>
