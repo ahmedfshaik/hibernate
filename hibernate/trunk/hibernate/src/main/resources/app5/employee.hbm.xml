@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="edu.home.hibernate.app5.Employee" table="EMPLOYEE">
+		<id name="eno" column="ENO" type="integer">
+			<generator class="sequence">
+				<param name="sequence">SEQ_EMPLOYEE</param>
+			</generator>
+			<!-- <generator class="hilo"> <param name="table">hi_value</param> <param 
+				name="column">next_value</param> <param name="max_lo">100</param> </generator> -->
+		</id>
+		<property name="ename" column="ENAME" type="string" length="100" />
+		<property name="age" />
+		<property name="salary" />
+		<property name="address" />
+		<property name="mobile" column="MOBILE" />
+		<!-- <set name="employeePan" table="EMPLOYEE_PAN" cascade="none"> <key 
+			name="ENO" not-null="true" unique="true"/> <one-to-many class="EmployeePan" 
+			/> </set> -->
+	</class>
+</hibernate-mapping>

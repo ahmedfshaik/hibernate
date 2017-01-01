@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="edu.home.hibernate.app2.Registration" table="REGISTRATION">
+   <id name="regid" column="REG_ID" type="integer">
+   	<generator class="increment"></generator>
+   </id>
+   <property name="name" column="NAME" type="string" length="100"/>
+   <property name="email" column="EMAIL" type="string" length="50"/>
+   <property name="mobile" column="MOBILE" type="string" length="10"/>
+   <property name="address" column="ADDRESS" type="string" length="100"/>
+ </class>
+</hibernate-mapping>
